@@ -3,6 +3,9 @@ int: G;
 int: W;
 array[1..P, 1..W] of var 1..G: X;
 
+constraint assert(P > 0, "P must be greater than 0");
+constraint assert(G > 0, "G must be greater than 0");
+constraint assert(W > 0, "W must be greater than 0");
 constraint assert(P mod G = 0, "P must be divisible by G");
 
 constraint forall(w in 1..W, g in 1..G)
